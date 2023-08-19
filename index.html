@@ -127,12 +127,19 @@
     var fanswitch=document.querySelector("#fan-on");
     
     
+     var flag=0;
+    
     fanswitch.onclick=function(){
-        
-            fanspin.style.animation="rotate .4s linear infinite";
+            if(flag==0){
+                fanspin.style.animation="rotate .4s linear infinite";
+                flag=1;
+            }
+            else{
+                fanspin.style.animation="none";
+                flag=0;
+            }
         
         }
-        
         
     
     
